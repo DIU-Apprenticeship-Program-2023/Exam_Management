@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+
+    <record id="tree2" model="ir.ui.view">
+      <field name="name">Student Result</field>
+      <field name="model">student.exam</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="questionid"/>
+          <field name="question"/>
+          <field name="answer"/>
+          <field name="marks"/>
+        </tree>
+      </field>
+
+    </record>
+
+    <record id="action_student_management1" model="ir.actions.act_window">
+      <field name="name">Student Information</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">student.exam</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="tree2"/>
+    </record>
+  </data>
+</odoo>
